@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgb(250, 212, 163);
+    color: black;
+    height: 60px;
+    font-family: "Poetsen One", sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    background-color: rgb(255, 255, 243);
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-family: "Poetsen One", sans-serif;
+    
+}
+.contanier{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family:sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    color: rgb(61, 49, 33);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(252, 236, 217);
+}
+.info{
+    font-size: 30px;
+}
+.gameinfo{
+    padding: 0 34px;
+}
+.gameinfo h1{
+    font-size: 2.5rem;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: none;
+}
+.bl-0{
+    border-left: none;
+}
+.bt-0{
+    border-top: none;
+}
+.bb-0{
+    border-bottom: none;
+}
+#reset{
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 30px;
+    width: 55px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: rgb(250, 212, 165);
+    
+    cursor: pointer;
+    font-family: "Poetsen One", sans-serif;
+}
+
+.line{
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: rgb(73, 46, 11);
+    transition: width 1s ease-in-out;
+}
+
+@media screen and (max-width: 950px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top: 34px;
+    }
+    .gameinfo h1{
+        font-size: 1.5rem;
+    }
+    .contanier{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
